@@ -161,6 +161,25 @@
     }
     .accent{color:var(--accent2);font-weight:900}
     .center{text-align:center}
+    .profile-image-wrap{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:18px;
+      box-shadow:var(--shadow);
+    }
+    .profile-image{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius:16px;
+    }
+    .profile-caption{
+      margin:14px 4px 0;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.8;
+    }
     @media (max-width:960px){
       .hero-grid,.cards,.split,.pricing,.form-wrap{grid-template-columns:1fr}
       .nav{display:none}
@@ -171,7 +190,7 @@
       .topbar-inner{min-height:58px}
       .hero-grid{padding:34px 0 36px}
       .hero-card{padding:18px}
-      .card,.faq-item,.check-item,.price-box,.fake-form,.support-box{padding:18px}
+      .card,.faq-item,.check-item,.price-box,.fake-form,.support-box,.profile-image-wrap{padding:18px}
       .cta-band{padding:24px}
       .btn{width:100%}
       .cta-row{display:grid;grid-template-columns:1fr}
@@ -316,19 +335,14 @@
       <div class="container">
         <h2>指導者プロフィール</h2>
         <p class="intro">神楽坂教室では、杉本 憲昭師範がカリキュラムを組み、直接指導します。護身の技術だけでなく、危機回避や法律知識も含めて、実生活で役立つ内容を大切にしています。</p>
-        <div class="cards">
-          <article class="card">
-            <h3>杉本先生</h3>
-            <p>セキュリティの現場で培った視点をもとに、実生活で役立つ護身術を指導。単なる技術習得ではなく、「無事で帰ること」を重視した内容を大切にしています。</p>
-          </article>
-          <article class="card">
-            <h3>指導方針</h3>
-            <p>相手を打ち負かすことではなく、危険を避け、必要以上に事態を悪化させず、自分の安全を確保するための考え方と行動を重視しています。</p>
-          </article>
-          <article class="card">
-            <h3>神楽坂教室で伝えたいこと</h3>
-            <p>年齢・性別・運動経験に関係なく、誰でも現実的に役立つ護身の考え方を学べる場を目指しています。</p>
-          </article>
+
+        <div class="profile-image-wrap">
+          <img
+            src="sugimoto-profile.jpg"
+            alt="杉本憲昭師範のプロフィール"
+            class="profile-image"
+          >
+          <p class="profile-caption">総合護身術 護真会 副代表／範士 杉本 憲昭師範</p>
         </div>
       </div>
     </section>
@@ -348,7 +362,7 @@
           <div class="price-box">
             <div class="price-note">補足</div>
             <ul class="bullet">
-              <li>希望者にはにロゴ入りTシャツ代 3,000円</li>
+              <li>希望者にはロゴ入りTシャツ代 3,000円</li>
               <li>体験の詳細はお問い合わせ後にご案内</li>
               <li>開催場所の関係上、講義終了後に1ドリンク付き</li>
             </ul>
@@ -473,7 +487,7 @@
       <div style="font-weight:800;margin-bottom:8px">総合護身術 護真会 神楽坂支部</div>
       <small>
         このページは神楽坂支部向けの体験申込LPです。<br>
-        実運用時は、フォーム送信先・LINEリンク・会場情報・杉本先生の正式プロフィールを差し替えてご利用ください。
+        実運用時は、フォーム送信先・LINEリンク・会場情報・杉本憲昭師範の正式プロフィールを差し替えてご利用ください。
       </small>
     </div>
   </footer>
