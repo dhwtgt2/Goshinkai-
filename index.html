@@ -1,475 +1,919 @@
 <!doctype html>
+
 <html lang="ja">
+
 <head>
+
   <meta charset="utf-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>総合護身術 護真会 神楽坂支部｜見学・体験受付中</title>
+
   <meta name="description" content="総合護身術 護真会 神楽坂支部。未経験者歓迎・女性歓迎。実戦に活きる護身術を神楽坂で。無料見学・無料体験受付中。">
+
   <style>
+
     :root{
+
       --bg:#0b1220;
+
       --bg2:#101a2f;
+
       --card:#ffffff;
+
       --text:#1f2937;
+
       --muted:#667085;
+
       --line:#e5e7eb;
+
       --accent:#d4a017;
+
       --accent2:#b8860b;
+
       --sub:#f8fafc;
+
       --danger:#a10f0f;
+
       --ok:#0f766e;
+
       --shadow:0 16px 40px rgba(15,23,42,.12);
+
       --radius:20px;
+
       --max:1120px;
+
     }
+
     *{box-sizing:border-box}
+
     html{scroll-behavior:smooth}
+
     body{
+
       margin:0;
+
       font-family:"Hiragino Sans","Noto Sans JP",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+
       color:var(--text);
+
       background:#fff;
+
       line-height:1.8;
+
     }
+
     a{text-decoration:none;color:inherit}
+
     img{max-width:100%;display:block}
+
     .container{width:min(var(--max),calc(100% - 32px));margin:0 auto}
+
     .topbar{
+
       position:sticky;top:0;z-index:50;
+
       backdrop-filter: blur(10px);
+
       background:rgba(11,18,32,.84);
+
       color:#fff;border-bottom:1px solid rgba(255,255,255,.12);
+
     }
+
     .topbar-inner{
+
       display:flex;align-items:center;justify-content:space-between;gap:16px;
+
       min-height:64px;
+
     }
+
     .brand{font-weight:800;font-size:14px;letter-spacing:.04em}
+
     .nav{display:flex;gap:18px;flex-wrap:wrap;font-size:14px;opacity:.94}
+
     .nav a:hover{color:#ffe08a}
+
     .nav-cta{
+
       display:inline-flex;align-items:center;justify-content:center;
+
       padding:10px 14px;border-radius:999px;background:var(--accent);color:#111827;
+
       font-weight:800;
+
     }
+
     .hero{
+
       color:#fff;
+
       background:
+
         linear-gradient(120deg,rgba(11,18,32,.92),rgba(11,18,32,.68)),
+
         radial-gradient(circle at top right,rgba(212,160,23,.20),transparent 30%),
+
         linear-gradient(135deg,var(--bg),var(--bg2));
+
       overflow:hidden;
+
     }
+
     .hero-grid{
+
       display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:center;
+
       padding:56px 0 46px;
+
     }
+
     .eyebrow{
+
       display:inline-flex;align-items:center;gap:10px;
+
       border:1px solid rgba(255,255,255,.18);border-radius:999px;
+
       padding:8px 14px;font-size:13px;font-weight:700;
+
       background:rgba(255,255,255,.08);
+
       margin-bottom:18px;
+
     }
+
     .hero h1{
+
       margin:0 0 14px;font-size:clamp(30px,5vw,54px);line-height:1.18;letter-spacing:.01em;
+
     }
+
     .hero p.lead{margin:0 0 18px;font-size:17px;color:rgba(255,255,255,.9)}
+
     .pill-row{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 24px}
+
     .pill{
+
       padding:9px 13px;border-radius:999px;background:rgba(255,255,255,.11);
+
       border:1px solid rgba(255,255,255,.12);font-size:14px;font-weight:700;
+
     }
+
     .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+
     .btn{
+
       display:inline-flex;align-items:center;justify-content:center;
+
       min-height:52px;padding:14px 20px;border-radius:14px;font-weight:800;
+
       border:1px solid transparent;transition:.2s transform ease,.2s opacity ease,.2s background ease;
+
     }
+
     .btn:hover{transform:translateY(-1px);opacity:.96}
+
     .btn-primary{background:var(--accent);color:#111827}
+
     .btn-secondary{background:#fff;color:#0f172a}
+
     .btn-outline{border-color:rgba(255,255,255,.28);color:#fff;background:transparent}
+
     .hero-card{
+
       background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);
+
       border-radius:24px;padding:22px;box-shadow:0 20px 50px rgba(0,0,0,.18);
+
     }
+
     .hero-card h3{margin:0 0 14px;font-size:20px}
+
     .hero-list{display:grid;gap:12px;margin:0;padding:0;list-style:none}
+
     .hero-list li{
+
       padding:12px 14px;border-radius:14px;background:rgba(255,255,255,.08);
+
       border:1px solid rgba(255,255,255,.08);font-size:15px;
+
     }
+
     .section{padding:72px 0}
+
     .section-alt{background:var(--sub)}
+
     .section h2{font-size:clamp(26px,4vw,38px);line-height:1.3;margin:0 0 14px}
+
     .section .intro{max-width:760px;color:var(--muted);margin-bottom:28px}
+
     .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+
     .card{
+
       background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+
       padding:22px;box-shadow:var(--shadow);
+
     }
+
     .card h3{margin:0 0 8px;font-size:20px;line-height:1.4}
+
     .card p{margin:0;color:var(--muted)}
+
     .problem-list,.check-list,.flow-list,.faq-list{display:grid;gap:14px}
+
     .problem-item,.flow-item,.faq-item,.check-item{
+
       background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 18px 18px 18px;
+
       box-shadow:var(--shadow);
+
     }
+
     .problem-item strong,.flow-item strong,.faq-item strong,.check-item strong{display:block;margin-bottom:6px}
+
     .split{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
+
     .pricing{
+
       display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:stretch;
+
     }
+
     .price-box{
+
       background:linear-gradient(180deg,#fff,#fcfcfd);border:1px solid var(--line);border-radius:24px;
+
       padding:26px;box-shadow:var(--shadow);
+
     }
+
     .price-main{font-size:34px;font-weight:900;line-height:1.2;margin:8px 0;color:#111827}
+
     .price-note{color:var(--muted);font-size:14px}
+
     .bullet{margin:0;padding-left:20px;color:var(--muted)}
+
     .cta-band{
+
       background:linear-gradient(120deg,#111827,#1f2937);color:#fff;border-radius:28px;padding:34px;
+
       box-shadow:0 18px 48px rgba(2,6,23,.20);
+
     }
+
     .cta-band p{color:rgba(255,255,255,.86)}
+
     .form-wrap{
+
       display:grid;grid-template-columns:1fr .9fr;gap:22px;align-items:start;
+
     }
+
     .fake-form{
+
       background:#fff;border:1px solid var(--line);border-radius:24px;padding:24px;box-shadow:var(--shadow);
+
     }
+
     .field{margin-bottom:14px}
+
     .label{display:block;font-size:14px;font-weight:700;margin-bottom:8px}
+
     .input,.select,.textarea{
+
       width:100%;padding:14px 14px;border:1px solid #d0d5dd;border-radius:12px;background:#fff;
+
       font:inherit;color:#111827;
+
     }
+
     .textarea{min-height:132px;resize:vertical}
+
     .submit{
+
       width:100%;padding:15px;border:none;border-radius:14px;background:var(--accent);color:#111827;
+
       font:inherit;font-weight:900;cursor:pointer;
+
     }
+
     .mini-note{font-size:13px;color:var(--muted);margin-top:12px}
+
     .support-box{background:#fff;border:1px solid var(--line);border-radius:24px;padding:24px;box-shadow:var(--shadow)}
+
     .footer{
+
       background:#0b1220;color:rgba(255,255,255,.86);padding:28px 0 44px;margin-top:40px;
+
     }
+
     .footer small{display:block;color:rgba(255,255,255,.64);line-height:1.7}
+
     .note-box{
+
       background:#fff7df;border:1px solid #f1da8f;color:#5c4700;border-radius:18px;padding:16px 18px;
+
       margin-top:18px;font-size:14px;
+
     }
+
     .badge{
+
       display:inline-flex;align-items:center;gap:8px;background:#ecfdf3;color:#067647;
+
       border:1px solid #abefc6;border-radius:999px;padding:7px 12px;font-size:13px;font-weight:800;
+
     }
+
     .accent{color:var(--accent2);font-weight:900}
+
     .center{text-align:center}
+
     @media (max-width:960px){
+
       .hero-grid,.cards,.split,.pricing,.form-wrap{grid-template-columns:1fr}
+
       .nav{display:none}
+
     }
+
     @media (max-width:720px){
+
       .section{padding:56px 0}
+
       .container{width:min(var(--max),calc(100% - 24px))}
+
       .topbar-inner{min-height:58px}
+
       .hero-grid{padding:34px 0 36px}
+
       .hero-card{padding:18px}
+
       .card,.problem-item,.flow-item,.faq-item,.check-item,.price-box,.fake-form,.support-box{padding:18px}
+
       .cta-band{padding:24px}
+
       .btn{width:100%}
+
       .cta-row{display:grid;grid-template-columns:1fr}
+
       .nav-cta{padding:9px 12px;font-size:13px}
+
     }
+
   </style>
+
 </head>
+
 <body>
+
   <header class="topbar">
+
     <div class="container topbar-inner">
+
       <a class="brand" href="#top">総合護身術 護真会 神楽坂支部</a>
+
       <nav class="nav" aria-label="グローバルナビゲーション">
+
         <a href="#about">護身術とは</a>
+
         <a href="#features">特徴</a>
+
         <a href="#flow">見学・体験の流れ</a>
+
         <a href="#pricing">料金案内</a>
+
         <a href="#faq">よくある質問</a>
+
       </nav>
+
       <a class="nav-cta" href="#contact">無料見学・体験</a>
+
     </div>
+
   </header>
 
   <main id="top">
+
     <section class="hero">
+
       <div class="container hero-grid">
+
         <div>
+
           <div class="eyebrow">無料見学・無料体験 受付中</div>
+
           <h1>いざという時に備える。<br>神楽坂で学ぶ<span class="accent">実戦護身術</span>。</h1>
+
           <p class="lead">未経験の方や女性の方でも始めやすい環境で、護身の技術だけでなく、危機回避や判断力まで含めた総合護身術を学べます。</p>
+
           <div class="pill-row">
+
             <div class="pill">未経験者歓迎</div>
+
             <div class="pill">女性歓迎</div>
+
             <div class="pill">見学のみOK</div>
+
             <div class="pill">体験のみOK</div>
+
           </div>
+
           <div class="cta-row">
+
             <a class="btn btn-primary" href="#contact">無料見学を申し込む</a>
+
             <a class="btn btn-secondary" href="#contact">無料体験を申し込む</a>
+
             <a class="btn btn-outline" href="#faq">質問だけしたい</a>
+
           </div>
+
         </div>
+
         <aside class="hero-card" aria-label="神楽坂支部の案内">
+
           <h3>神楽坂支部で大切にしていること</h3>
+
           <ul class="hero-list">
+
             <li>護身の技術だけでなく、危険を避ける考え方も学ぶ</li>
+
             <li>現実的な場面を意識した、実戦性のある護身術</li>
+
             <li>初めての方でも参加しやすい見学・体験導線</li>
+
             <li>「少し気になる」段階でも相談しやすい窓口設計</li>
+
           </ul>
-          <div class="note-box">
-            本ページは神楽坂支部の見学・体験申込向けのLPです。必要に応じて本部サイトへの導線や支部独自の案内を追加してください。
-          </div>
+
         </aside>
+
       </div>
+
     </section>
 
     <section class="section">
+
       <div class="container split">
+
         <div>
+
           <span class="badge">神楽坂支部向けの申込導線</span>
-          <h2>「気になる」で止まらず、<br>その場で申し込めるページに。</h2>
-          <p class="intro">護身術に興味があっても、メール作成の手間や不安があると申込前に離脱しがちです。神楽坂支部のLPでは、見学・体験・質問の導線を整理し、スマホからでも動きやすい構成にしています。</p>
+
+          <h2>見学・体験を、もっと気軽に。</h2>
+
+          <p class="intro">未経験の方、女性の方も歓迎しております。まずは見学・体験からお気軽にご参加ください。</p>
+
         </div>
+
         <div class="problem-list">
+
           <div class="problem-item">
+
             <strong>こんなお悩みはありませんか</strong>
+
             いざという時に備えたいが、何から始めればいいかわからない。
+
           </div>
+
           <div class="problem-item">
+
             <strong>未経験で不安</strong>
+
             武道や格闘技の経験がなく、参加しづらいと感じている。
+
           </div>
+
           <div class="problem-item">
+
             <strong>女性でも学べる場所を探している</strong>
+
             力任せではなく、自分を守る考え方も身につけたい。
+
           </div>
+
         </div>
+
       </div>
+
     </section>
 
     <section class="section section-alt" id="about">
+
       <div class="container">
+
         <h2>総合護身術とは</h2>
+
         <p class="intro">総合護身術は、単に技を覚えるだけではありません。危険を未然に避ける意識、状況判断、とっさの場面で身を守る実践的な動きまで含めて、総合的に学んでいく考え方です。</p>
+
         <div class="cards">
+
           <article class="card">
+
             <h3>危険の未然回避</h3>
+
             <p>トラブルに巻き込まれないための見方や考え方も、護身の大切な要素です。</p>
+
           </article>
+
           <article class="card">
+
             <h3>実戦を意識した技術</h3>
+
             <p>形だけではなく、現実的な場面を想定した学びを重視します。</p>
+
           </article>
+
           <article class="card">
+
             <h3>未経験でも学びやすい</h3>
+
             <p>初めての方にも取り組みやすい形で、基礎から丁寧に身につけていきます。</p>
+
           </article>
+
         </div>
+
       </div>
+
     </section>
 
     <section class="section" id="features">
+
       <div class="container">
+
         <h2>神楽坂支部の特徴</h2>
+
         <p class="intro">神楽坂支部では、初めての方でも一歩踏み出しやすいことを大切にしています。見学・体験のハードルを下げ、学び始めやすい導線にしています。</p>
+
         <div class="cards">
+
           <article class="card">
+
             <h3>未経験者歓迎</h3>
+
             <p>武道や格闘技の経験がない方にも配慮しながら、基礎から丁寧に進めます。</p>
+
           </article>
+
           <article class="card">
+
             <h3>女性歓迎</h3>
+
             <p>力だけに頼らない考え方や動き方も重視し、安心して参加しやすい環境を目指します。</p>
+
           </article>
+
           <article class="card">
+
             <h3>見学・体験から始められる</h3>
+
             <p>雰囲気を知りたい方も、いきなり入会ではなく見学・体験から始められます。</p>
+
           </article>
+
           <article class="card">
+
             <h3>危機管理も学べる</h3>
+
             <p>護身の技術だけでなく、危険を避ける意識や判断の考え方も大切にしています。</p>
+
           </article>
+
           <article class="card">
+
             <h3>スマホで申し込みやすい</h3>
+
             <p>問い合わせ方法を整理し、見学・体験・質問のどれでも動きやすい構成です。</p>
+
           </article>
+
           <article class="card">
+
             <h3>気軽に相談しやすい</h3>
+
             <p>「少し気になる」段階でも相談できるように、質問だけの窓口も用意しています。</p>
+
           </article>
+
         </div>
+
       </div>
+
     </section>
 
     <section class="section section-alt" id="check">
+
       <div class="container">
+
         <h2>こんな方におすすめです</h2>
+
         <div class="check-list">
+
           <div class="check-item"><strong>自分の身を守る力を身につけたい方</strong>いざという時に備えて、現実的な護身の考え方と動きを学びたい方に向いています。</div>
+
           <div class="check-item"><strong>女性でも学びやすい護身術を探している方</strong>未経験でも始めやすく、無理なく学べる環境を重視したい方におすすめです。</div>
+
           <div class="check-item"><strong>見学や体験から気軽に始めたい方</strong>雰囲気を見てから考えたい方でも、安心して一歩目を踏み出しやすい構成です。</div>
+
         </div>
+
       </div>
+
     </section>
 
     <section class="section" id="flow">
+
       <div class="container">
+
         <h2>見学・体験の流れ</h2>
+
         <p class="intro">まずは難しく考えず、お気軽にお問い合わせください。見学だけ、体験だけ、質問だけでも問題ありません。</p>
+
         <div class="cards">
+
           <article class="card"><h3>1. お申し込み</h3><p>フォームやLINEから、見学・体験・ご質問をお送りください。</p></article>
+
           <article class="card"><h3>2. 日程調整</h3><p>ご希望内容を確認し、日程や詳細をご案内いたします。</p></article>
+
           <article class="card"><h3>3. 当日参加</h3><p>実際の雰囲気や内容をご確認いただけます。無理な勧誘は前面に出さず、安心感を優先します。</p></article>
+
         </div>
+
       </div>
+
     </section>
 
     <section class="section section-alt" id="pricing">
+
       <div class="container">
+
         <h2>料金案内</h2>
+
         <p class="intro">公開されている本部の一般部料金に合わせた表示にしています。神楽坂支部で別設定がある場合は、この部分だけ差し替えてください。</p>
+
         <div class="pricing">
+
           <div class="price-box">
+
             <div class="price-note">始めやすい料金設定</div>
+
             <div class="price-main">月会費 10,000円</div>
+
             <ul class="bullet">
+
               <li>一般部</li>
+
               <li>入会金 5,000円</li>
+
               <li>年会費 無料</li>
+
             </ul>
+
           </div>
+
           <div class="price-box">
+
             <div class="price-note">補足</div>
+
             <ul class="bullet">
+
               <li>本部公開情報では、入会時にロゴ入りTシャツ代 3,000円が必要と案内されています。</li>
+
               <li>見学・体験の詳細や持ち物は、申込後に個別案内する運用がおすすめです。</li>
+
               <li>支部独自のキャンペーンがある場合は、ここに追記してください。</li>
+
             </ul>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
 
     <section class="section">
+
       <div class="container">
+
         <div class="cta-band center">
+
           <h2 style="margin-top:0">無料見学・無料体験 受付中</h2>
+
           <p>未経験の方、女性の方も歓迎しております。まずはお気軽にお問い合わせください。</p>
+
           <div class="cta-row" style="justify-content:center">
+
             <a class="btn btn-primary" href="#contact">無料見学を申し込む</a>
+
             <a class="btn btn-secondary" href="#contact">無料体験を申し込む</a>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
 
     <section class="section section-alt" id="faq">
+
       <div class="container">
+
         <h2>よくある質問</h2>
+
         <div class="faq-list">
+
           <div class="faq-item"><strong>未経験でも大丈夫ですか？</strong>はい、大丈夫です。初めての方でも学びやすい形で進めていきます。</div>
+
           <div class="faq-item"><strong>女性でも参加できますか？</strong>はい、歓迎しております。体力に自信がない方にも配慮しながら学べる環境を大切にしています。</div>
+
           <div class="faq-item"><strong>見学だけでも可能ですか？</strong>はい、可能です。まずは雰囲気を知りたいという方もお気軽にご相談ください。</div>
+
           <div class="faq-item"><strong>体験だけでも大丈夫ですか？</strong>はい、大丈夫です。無理に入会をおすすめする構成にはしていません。</div>
+
           <div class="faq-item"><strong>どんな服装で参加すればいいですか？</strong>詳細はお申し込み後にご案内します。まずはお気軽にお問い合わせください。</div>
+
         </div>
+
       </div>
+
     </section>
 
     <section class="section" id="contact">
+
       <div class="container">
+
         <h2>見学・体験・ご質問はこちら</h2>
+
         <p class="intro">このままGoogleフォームやSTUDIOのフォームに差し替えられる構成です。右側にはLINEやメール案内、支部住所、稽古場所などを追加できます。</p>
+
         <div class="form-wrap">
+
           <div class="fake-form">
+
             <form>
+
               <div class="field">
+
                 <label class="label" for="name">お名前</label>
+
                 <input class="input" id="name" type="text" placeholder="例）山田 太郎">
+
               </div>
+
               <div class="field">
+
                 <label class="label" for="email">メールアドレス</label>
+
                 <input class="input" id="email" type="email" placeholder="例）sample@example.com">
+
               </div>
+
               <div class="field">
+
                 <label class="label" for="phone">電話番号</label>
+
                 <input class="input" id="phone" type="tel" placeholder="例）090-1234-5678">
+
               </div>
+
               <div class="field">
+
                 <label class="label" for="type">ご希望内容</label>
+
                 <select class="select" id="type">
+
                   <option>無料見学</option>
+
                   <option>無料体験</option>
+
                   <option>質問だけしたい</option>
+
                 </select>
+
               </div>
+
               <div class="field">
+
                 <label class="label" for="date">ご希望日時</label>
+
                 <input class="input" id="date" type="text" placeholder="例）土曜日 午後 / 4月25日 19:00 など">
+
               </div>
+
               <div class="field">
+
                 <label class="label" for="age">年齢層</label>
+
                 <select class="select" id="age">
+
                   <option>10代</option>
+
                   <option>20代</option>
+
                   <option>30代</option>
+
                   <option>40代</option>
+
                   <option>50代以上</option>
+
                 </select>
+
               </div>
+
               <div class="field">
+
                 <label class="label" for="message">ご質問内容</label>
+
                 <textarea class="textarea" id="message" placeholder="気になることがあればご記入ください"></textarea>
+
               </div>
+
               <button class="submit" type="button">送信する</button>
+
               <div class="mini-note">※ このHTMLはデモ用です。実運用ではGoogleフォーム、STUDIOフォーム、または外部フォームに接続してください。</div>
+
             </form>
+
           </div>
 
           <aside class="support-box">
+
             <h3 style="margin-top:0">運用時にここへ入れる情報</h3>
+
             <ul class="bullet">
+
               <li>LINE公式アカウントのリンク</li>
+
               <li>メールアドレス</li>
+
               <li>稽古場所・アクセス</li>
+
               <li>開催曜日や時間</li>
+
               <li>本部サイトへのリンク</li>
+
             </ul>
+
             <div class="note-box">
+
               置換ポイント：<br>
+
               ・「無料見学を申し込む」などのボタン先<br>
+
               ・LINE URL<br>
+
               ・神楽坂支部の実住所や会場情報<br>
+
               ・必要なら本部サイトURL
+
             </div>
+
             <div class="cta-row" style="margin-top:18px">
+
               <a class="btn btn-primary" href="https://line.me/" target="_blank" rel="noopener">LINEで問い合わせ</a>
+
               <a class="btn btn-secondary" href="mailto:sample@example.com">メールで問い合わせ</a>
+
             </div>
+
           </aside>
+
         </div>
+
       </div>
+
     </section>
+
   </main>
 
   <footer class="footer">
+
     <div class="container">
+
       <div style="font-weight:800;margin-bottom:8px">総合護身術 護真会 神楽坂支部</div>
+
       <small>
+
         このLPは神楽坂支部向けの見学・体験導線用サンプルとして作成しています。<br>
+
         実運用時は、支部情報・フォーム送信先・LINEリンク・会場情報を差し替えてご利用ください。
+
       </small>
+
     </div>
+
   </footer>
+
 </body>
+
 </html>
